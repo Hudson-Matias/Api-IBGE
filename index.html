@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Notícias do IBGE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Portal de Notícias do IBGE</h1>
+        <form id="search-form">
+            <div id="search-container">
+                <input id="search-input" type="text" placeholder="Buscar notícia por termo">
+                <button id="search-button" type="submit">🔍</button>
+            </div>
+            <div id="filter-icon">
+                <svg
+                    width="20"
+                    height="20"
+                    fill="#f0f0f0"
+                    viewBox="0 0 80 90"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+                </svg>
+                <span id="active-filters-count">0</span>
+            </div>
+        </form>
+    </header>
+    <main>
+        <ul id="news-list"></ul>
+        <ul id="pagination"></ul>
+    </main>
+    <footer>
+        <p>© Prova do segundo bimestre - Programação Web</p>
+    </footer>
+    <dialog id="filter-dialog">
+        <form id="filter-form">
+            <label for="type">Tipo:</label>
+            <select id="type" name="type"></select>
+            <label for="quantity">Quantidade:</label>
+            <input id="quantity" name="quantity" type="number" min="5" step="5" value="10">
+            <label for="from">De:</label>
+            <input id="from" name="from" type="date">
+            <label for="to">Até:</label>
+            <input id="to" name="to" type="date">
+            <button type="submit">Aplicar</button>
+        </form>
+        <button id="close-dialog">X</button>
+    </dialog>
+    <script src="script.js"></script>
+</body>
+</html>
